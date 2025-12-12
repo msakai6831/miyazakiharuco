@@ -28,7 +28,7 @@ body {
     height: 60vh;
     /* Adjust as needed */
     min-height: 400px;
-    background-image: url('header-new.png');
+    background-image: url('header-new-clean.png');
     background-size: cover;
     background-position: center center;
     display: flex;
@@ -36,14 +36,27 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #fff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: #5a4d33;
+    /* Dark elegant brown/gold for contrast */
 }
 
-.hero h1,
+.hero h1 {
+    display: block;
+    font-size: 1.2rem;
+    /* Reduced to ~50% of previous size */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    /* Glow to separate from background */
+    letter-spacing: 0.05em;
+}
+
 .hero p {
-    display: none;
-    /* Text is included in the image */
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+
 }
 
 .content {
