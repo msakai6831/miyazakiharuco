@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #333;
+    --accent-color: #d4af37;
+    /* Gold-ish */
+    --bg-color: #fff;
+    --font-family-serif: 'Zen Old Mincho', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family-serif);
+    color: var(--primary-color);
+    line-height: 2.0;
+    background-color: var(--bg-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    /* Adjust as needed */
+    min-height: 400px;
+    background-image: url('images/hero-banner.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1,
+.hero p {
+    display: none;
+    /* Text is included in the image */
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: left;
+    /* Image text looks left-aligned but centered in container? Let's check. */
+}
+
+/* Looking at the image, the text "人生って、不思議です。" seems left aligned, but the container effectively centers it. 
+   The heading "話し方風水® オンラインサロン" is centered.
+*/
+
+.content-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.content-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.content-header .sub-title {
+    font-size: 1.1rem;
+    font-weight: 400;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.text-body {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    /* Center the block of text itself?
+     In the image, the text lines are:
+     "人生って、不思議です。"
+     It looks like standard left alignment.
+  */
+}
+
+.text-body p {
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    font-weight: 700;
+    /* border-bottom: 1px solid var(--primary-color); */
+    /* Maybe bold is enough */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1,
+.hero p {
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.hero p {
+    animation-delay: 0.5s;
+    opacity: 0;
+    /* meaningful start state */
+}
+
+.content {
+    animation: fadeIn 2s ease-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+.text-continued p {
+    margin-bottom: 2rem;
+}
+
+.highlight-bold {
+    font-weight: 700;
+}
+
+.separator-line {
+    border-top: 1px solid #ddd;
+    margin: 3rem 0;
+}
+
+.separator-line-light {
+    border-top: 1px solid #eee;
+    margin: 2rem 0;
+}
+
+.features-section {
+    text-align: left;
+    margin-top: 3rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.feature-item h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feature-item .icon {
+    font-size: 1rem;
+    /* Adjust icon size if needed */
+}
+
+.feature-item p {
+    margin-left: 2rem;
+    /* Indent description to align with text start */
+    line-height: 1.8;
+}
+
+.promise-section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.promise-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+/* Plans Section */
+.plan-item {
+    margin-bottom: 3rem;
+}
+
+.plan-item h4 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.plan-item .small-text {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.plan-item .price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Receive Section */
+.receive-list {
+    list-style-type: disc;
+    margin-left: 2rem;
+    font-size: 1.1rem;
+}
+
+.receive-list li {
+    margin-bottom: 0.5rem;
+}
+
+.receive-conclusion {
+    margin-top: 2rem;
+    line-height: 1.8;
+}
+
+/* Profile Section */
+.profile-section {
+    text-align: left;
+}
+
+.profile-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.profile-section p {
+    margin-bottom: 1.5rem;
+    text-align: left;
+    /* Keep body text left aligned */
+}
+
+/* Message Section */
+.message-section {
+    margin-bottom: 4rem;
+}
+
+.cta-section {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #fff;
+    /* Might need better contrast depending on the gold */
+    text-decoration: none;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    font-weight: 700;
+}
+
+.btn-cta:hover {
+    transform: translateY(-2px);
+    background-color: #bfa030;
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    font-size: 0.9rem;
+    color: #666;
+}
