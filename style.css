@@ -6,6 +6,8 @@
     /* Gold-ish */
     --bg-color: #fff;
     --font-family-serif: 'Zen Old Mincho', serif;
+    --highlight-red: #d9534f;
+    /* Added red color */
 }
 
 * {
@@ -105,6 +107,10 @@ body {
     font-weight: 700;
     /* border-bottom: 1px solid var(--primary-color); */
     /* Maybe bold is enough */
+}
+
+.text-red {
+    color: var(--highlight-red);
 }
 
 /* Responsive adjustments */
